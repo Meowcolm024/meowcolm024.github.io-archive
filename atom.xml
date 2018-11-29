@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-25T10:09:47.806Z</updated>
+  <updated>2018-11-29T14:25:48.320Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Insertion Sort</title>
+    <link href="http://yoursite.com/2018/11/29/Insertion-Sort/"/>
+    <id>http://yoursite.com/2018/11/29/Insertion-Sort/</id>
+    <published>2018-11-29T14:22:39.000Z</published>
+    <updated>2018-11-29T14:25:48.320Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="insertion-sort"><a class="markdownIt-Anchor" href="#insertion-sort"></a> Insertion Sort</h1><blockquote><p>Well this article is testing codes 😃</p></blockquote><p>Here is code:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        key = arr[i];</span><br><span class="line">        j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt; <span class="number">-1</span>) &amp;&amp; (arr[j] &gt; key) )</span><br><span class="line">        &#123;</span><br><span class="line">            arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;insertion-sort&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#insertion-sort&quot;&gt;&lt;/a&gt; Insertion Sort&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Well this article is te
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>test</title>
