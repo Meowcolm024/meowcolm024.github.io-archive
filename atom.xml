@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-29T14:32:32.793Z</updated>
+  <updated>2018-12-01T07:19:29.335Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Merge Sort</title>
+    <link href="http://yoursite.com/2018/12/01/Merge-Sort/"/>
+    <id>http://yoursite.com/2018/12/01/Merge-Sort/</id>
+    <published>2018-12-01T07:18:18.000Z</published>
+    <updated>2018-12-01T07:19:29.335Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="merge-sort"><a class="markdownIt-Anchor" href="#merge-sort"></a> Merge Sort</h1><blockquote><p>Well, testing pictures XD</p></blockquote><p><img src="https://cppbetterexplained.com/wp-content/uploads/2016/06/merge-sort-algorithm-diagram.png" alt="Merge Sort"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;merge-sort&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#merge-sort&quot;&gt;&lt;/a&gt; Merge Sort&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Well, testing pictures XD&lt;/p&gt;
+&lt;/blo
+      
+    
+    </summary>
+    
+      <category term="Alogrithm" scheme="http://yoursite.com/categories/Alogrithm/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Insertion Sort</title>
     <link href="http://yoursite.com/2018/11/29/Insertion-Sort/"/>
     <id>http://yoursite.com/2018/11/29/Insertion-Sort/</id>
     <published>2018-11-29T14:22:39.000Z</published>
-    <updated>2018-11-29T14:32:32.793Z</updated>
+    <updated>2018-11-30T14:24:58.610Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="insertion-sort"><a class="markdownIt-Anchor" href="#insertion-sort"></a> Insertion Sort</h1><blockquote><p>Well this article is testing codes 😃</p></blockquote><p>Here is code:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        key = arr[i];</span><br><span class="line">        j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt; <span class="number">-1</span>) &amp;&amp; (arr[j] &gt; key) )</span><br><span class="line">        &#123;</span><br><span class="line">            arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="insertion-sort"><a class="markdownIt-Anchor" href="#insertion-sort"></a> Insertion Sort</h1><blockquote><p>Well this article is for testing codes 😃</p></blockquote><p>Here is the code:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        key = arr[i];</span><br><span class="line">        j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt; <span class="number">-1</span>) &amp;&amp; (arr[j] &gt; key) )</span><br><span class="line">        &#123;</span><br><span class="line">            arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -31,7 +59,7 @@
       
         &lt;h1 id=&quot;insertion-sort&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#insertion-sort&quot;&gt;&lt;/a&gt; Insertion Sort&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Well this article is te
+&lt;p&gt;Well this article is fo
       
     
     </summary>

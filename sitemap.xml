@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/12/01/Merge-Sort/</loc>
+    
+    <lastmod>2018-12-01T07:19:29.335Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/11/29/Insertion-Sort/</loc>
     
-    <lastmod>2018-11-29T14:32:32.793Z</lastmod>
+    <lastmod>2018-11-30T14:24:58.610Z</lastmod>
     
   </url>
   
