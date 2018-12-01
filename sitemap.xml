@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/12/01/Calculating-Pi/</loc>
+    
+    <lastmod>2018-12-01T13:17:45.659Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/12/01/Merge-Sort/</loc>
     
     <lastmod>2018-12-01T07:19:29.335Z</lastmod>

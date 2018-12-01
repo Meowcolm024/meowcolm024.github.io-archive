@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Meowcolm024</title>
   
-  
+  <subtitle>A personal blog of Meowcolm</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-01T07:19:29.335Z</updated>
+  <updated>2018-12-01T13:17:45.659Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Calculating Pi</title>
+    <link href="http://yoursite.com/2018/12/01/Calculating-Pi/"/>
+    <id>http://yoursite.com/2018/12/01/Calculating-Pi/</id>
+    <published>2018-12-01T13:12:37.000Z</published>
+    <updated>2018-12-01T13:17:45.659Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="calculating-pie"><a class="markdownIt-Anchor" href="#calculating-pie"></a> Calculating pie</h1><p>Well there is a really easy way to calculate π using C++(or any<br>other programming language actually…)</p><p>And here is a simple programme used to calculate π 😃</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> pie = <span class="number">1.0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; <span class="number">1000000</span>; i++)</span><br><span class="line">        pie = pie+(<span class="number">-1</span>+<span class="number">2</span>*(i%<span class="number">2</span>))*(<span class="number">1</span>/<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(<span class="number">2</span>*i<span class="number">-1</span>));</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"pi: "</span> &lt;&lt; pie * <span class="number">4</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;calculating-pie&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#calculating-pie&quot;&gt;&lt;/a&gt; Calculating pie&lt;/h1&gt;
+&lt;p&gt;Well there is a really easy way t
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Merge Sort</title>
