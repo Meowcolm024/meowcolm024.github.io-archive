@@ -80,21 +80,21 @@
             
               <li class="category-list-container">
                 <a href="javascript:;">Category</a>
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li></ul>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fate/">Fate</a><span class="category-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">5</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">6</span></li></ul>
               </li>
             
           
@@ -155,6 +155,85 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
+        <a href="/2018/12/02/FGO-Script/">
+  FGO Script
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/12/02/FGO-Script/"><span class="article-date">
+  2018-12-02
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Fate/">Fate</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="thinking-in-the-script-of-fatego"><a class="markdownIt-Anchor" href="#thinking-in-the-script-of-fatego"></a> Thinking in the Script of Fate/GO</h1>
+<h2 id="background"><a class="markdownIt-Anchor" href="#background"></a> Background</h2>
+<p>I’m not gonna talk much about the background since everyone who plays this game konws that it’s a really a time-consuming game. What is more, the player need to repetitive actions which are meaningless. Thus, a script is necessary to complete these tasks.</p>
+<h2 id="the-main-thinking"><a class="markdownIt-Anchor" href="#the-main-thinking"></a> The main thinking</h2>
+<p>There are approximately five parts I would like to cover:</p>
+<ol>
+<li>Order Card recognizing</li>
+<li>Servant recognizing</li>
+<li>Attack calculation</li>
+<li>AP recognition &amp; Interface recognition</li>
+<li>Holy Phantasms detection</li>
+</ol>
+<h3 id="order-card-recognizing"><a class="markdownIt-Anchor" href="#order-card-recognizing"></a> Order Card recognizing</h3>
+<p>This is the most basic part of the script(and the <em>Attack calculation</em> part is also essential).</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/13678149-f9b3b76bcd46f603.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Battle Interface"></p>
+<p>The parts circled are the parts we need to detect(obviously).</p>
+<p>So first is the type of the card, which are <em>Quick</em>, <em>Arts</em> and <em>Buster</em> (the <em>Extra Attack</em> is speical so we would cover that later in the <em>Servant recognizing</em> part). To achieve this, we could the <strong>OpenCV</strong> library in Python(Yes, we are going to use <strong>Python</strong> this time 😃) and there is a funtion in the library call <strong>matchTemplate()</strong>, which could match a <em>template</em> with a image and produce a matix showing the how much is template is similar to the image in certain location. Knowing that, we could start working.</p>
+<p>First, we should ervery <em>Order Card</em> as an <strong>Object</strong>, since finally we need to choose 3 of them out of 5(ignoring the Holy Phantasms card). There is a way to match necessary information to the card: We could split the interface into five pieces with each piece contain only <strong>ONE</strong> <em>Order Card</em>. Then we could match the <em>card type</em>,  the <em>card state</em> and the <em>servant</em>(<em>Servant recognition</em> is actually much more complicated) into each card separately. With the <strong>matchTemplate()</strong> function metioned above, we could complete it easily, and taht is the <em>Order Card recognizing</em> part done.</p>
+<h3 id="servant-recognizing"><a class="markdownIt-Anchor" href="#servant-recognizing"></a> Servant recognizing</h3>
+<p>Well this is a really tricky part. Because of the fact that all servants would not appear at the <em>first turn</em> in most cases, and it is impossible to make templates for every servant in the game, we need to find a way to solve that.</p>
+<p>And here is the idea that I came up with: We could create the <em>templates</em> from the screenshot(or the interface) itself. As the location of the portrait of the servant on the card is fixed, and each servant has his/hers/its own portrait, we could just cut the portrait of each servant out and create templates using them. However, we might create repeated templates which need to be deleted. With just a few loops(since we do concern about efficiency) can we achieve our target. Then we just need the match the information into the <em>Order Card</em>. So the <em>Servant recognizing</em> part done.(But realizing it using Python is not as easy as I have written here QAQ)</p>
+<h3 id="attack-calculation"><a class="markdownIt-Anchor" href="#attack-calculation"></a> Attack calculation</h3>
+<p>It is known that if we arrange the same set of cards differently, we would get different attack(I would like to call it <em>Attack Index</em> ==). Although different servents have different <em>Attack Index</em>, we just ignore that in order to make the script simple. So we just need to consider the arrangement of the cards we have. The image is the <em>Rule of the aclculation of Attack Index</em></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/13678149-b63bcf30df4684f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Rule of calculatiuon"></p>
+<p>Remember that we have already known about the <em>servant</em>, the <em>card type</em>, the <em>card state</em> when we completed the previous steps, we noe can make them into practice. The only thing we need to do is to follow the rule and write an alogrithm based on chart above, just some multiplications right? (so we focusing on whether the script could rather than whether it is effective or not orz)</p>
+<p>Though <em>Holy Phantasms card</em> have not been included yet, we shall talk about taht later. But for the <em>Attack calculation</em> part, it is done.</p>
+<h3 id="ap-recognition-interface-recognition"><a class="markdownIt-Anchor" href="#ap-recognition-interface-recognition"></a> AP recognition &amp; Interface recognition</h3>
+<p>This part is quite important actually. But it is also a easy part due to the fact that we have completed the most difficult parts. Most of this part is just matching templates and getting coordinates. We also need to recover AP when it is insufficient. As for how many <em>Gloden Apples</em> need to be eaten, it depends on the player. It is still a quite an easy part, right?</p>
+<h3 id="holy-phantasms-detection"><a class="markdownIt-Anchor" href="#holy-phantasms-detection"></a> Holy Phantasms detection</h3>
+<p>We know that every servant has a unique <em>Holy Phantasms</em> with its own name. In order to detect that, we need to use the template of the <strong>servant</strong> instead of the template of the <em>order card</em>. But we still need something the facilitate us, since we do not want to release every turn. So we need to mke use of <strong>Tesseract</strong>. This is a OCR library to recognize texts and we will used it to detect <em>turns</em>. Through this, we could release the <em>Holy Phantasms</em> at the certain turn(the <em>FATAL BATTLE</em> for example).</p>
+<h3 id="some-minor-things"><a class="markdownIt-Anchor" href="#some-minor-things"></a> Some minor things</h3>
+<p>If you have read the codes, we may find out that the script also support different “modes”. They are desigened to optimize the performace your <em>party</em>, like <em>Arts Mode</em> etc. Each mode has its own characteristic, for example, in <em>Arts Mode</em>, the script would select 3 <em>Arts cards</em> if possible, instead of choosing the arrangement with highest <em>Attack Index</em>, but in the circumstance that there are less than 3 <em>Arts cards</em> the script would perform like the <em>Default Mode</em> which means that it would chooe the arrangement with highest <em>Attack Index</em>.</p>
+<p>Also the player himself/herself need to make a template for the <em>checkpoint</em> to inform the script of which checkpoint need to be chose. And <em>Support Servants</em> would be chose randomly XD!</p>
+<h2 id="the-end"><a class="markdownIt-Anchor" href="#the-end"></a> The end</h2>
+<p>You can checkout the source code in <a href="https://github.com/Meowcolm024/FGO-One" target="_blank" rel="noopener">GitHub</a> 😃.</p>
+<p>And also two articles written in Chinese: <a href="https://www.jianshu.com/p/55d78d98e168" target="_blank" rel="noopener">1</a>, <a href="https://www.jianshu.com/p/1b2ca5454c73" target="_blank" rel="noopener">2</a>.</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
         <a href="/2018/12/01/Calculating-Pi/">
   Calculating Pi
 </a>
@@ -178,7 +257,7 @@
       </div>
       <div class="article-entry">
         
-          <h1 id="calculating-pie"><a class="markdownIt-Anchor" href="#calculating-pie"></a> Calculating pie</h1>
+          <h1 id="calculating-π"><a class="markdownIt-Anchor" href="#calculating-π"></a> Calculating π</h1>
 <p>Well there is a really easy way to calculate π using C++(or any other programming language actually…)</p>
 <p>And here is a simple programme used to calculate π 😃</p>
 <p>The algorithm is actually based on the <em>Leibniz formula for π</em></p>
