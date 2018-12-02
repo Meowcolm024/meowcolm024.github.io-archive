@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-12-02T02:35:13.355Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/12/01/Calculating-Pi/</loc>
     
-    <lastmod>2018-12-01T13:21:15.084Z</lastmod>
+    <lastmod>2018-12-02T02:22:16.424Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2018/11/29/Insertion-Sort/</loc>
     
     <lastmod>2018-11-30T14:24:58.610Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2018-11-25T10:59:02.172Z</lastmod>
     
   </url>
   
