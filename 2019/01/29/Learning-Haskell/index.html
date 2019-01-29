@@ -8,22 +8,22 @@
 
 <title>
   
-    Insertion Sort
+    Learning Haskell
   
 </title>
 
-<meta name="description" content="Insertion Sort  Well this article is for testing codes 😃  Here is the code: 123456789101112131415void sort(int arr[], int len)&amp;#123;    int key, j;    for (int i = 1; i &amp;lt; len; i++)    &amp;#123;">
-<meta name="keywords" content="C++">
+<meta name="description" content="Some simple Haskell functions here 😃 Quick Sort 123456quicksort :: (Ord a) =&amp;gt; [a] -&amp;gt; [a]quicksort [] = []quicksort (x:xs) =    let smallerSorted = quicksort (filter (&amp;lt;=x) xs)          bigger">
+<meta name="keywords" content="Haskell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Insertion Sort">
-<meta property="og:url" content="http://yoursite.com/2018/11/29/Insertion-Sort/index.html">
+<meta property="og:title" content="Learning Haskell">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/Learning-Haskell/index.html">
 <meta property="og:site_name" content="Meowcolm024">
-<meta property="og:description" content="Insertion Sort  Well this article is for testing codes 😃  Here is the code: 123456789101112131415void sort(int arr[], int len)&amp;#123;    int key, j;    for (int i = 1; i &amp;lt; len; i++)    &amp;#123;">
+<meta property="og:description" content="Some simple Haskell functions here 😃 Quick Sort 123456quicksort :: (Ord a) =&amp;gt; [a] -&amp;gt; [a]quicksort [] = []quicksort (x:xs) =    let smallerSorted = quicksort (filter (&amp;lt;=x) xs)          bigger">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-30T14:24:58.610Z">
+<meta property="og:updated_time" content="2019-01-29T11:55:53.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Insertion Sort">
-<meta name="twitter:description" content="Insertion Sort  Well this article is for testing codes 😃  Here is the code: 123456789101112131415void sort(int arr[], int len)&amp;#123;    int key, j;    for (int i = 1; i &amp;lt; len; i++)    &amp;#123;">
+<meta name="twitter:title" content="Learning Haskell">
+<meta name="twitter:description" content="Some simple Haskell functions here 😃 Quick Sort 123456quicksort :: (Ord a) =&amp;gt; [a] -&amp;gt; [a]quicksort [] = []quicksort (x:xs) =    let smallerSorted = quicksort (filter (&amp;lt;=x) xs)          bigger">
 
 
   <link rel="alternative" href="/atom.xml" title="Meowcolm024" type="application/atom+xml">
@@ -151,39 +151,34 @@
       
         <div style="max-width: 1000px">
       
-          <article id="post-Insertion-Sort" class="article article-type-post">
+          <article id="post-Learning-Haskell" class="article article-type-post">
   
     <h1 class="article-header">
-      Insertion Sort
+      Learning Haskell
     </h1>
   
   
 
   <div class="article-info">
     <span class="article-date">
-  2018-11-29
+  2019-01-29
 </span>
 
     
-	<span class="article-category tagcloud">
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Alogrithm/">Alogrithm</a></li></ul>
-	</span>
-
 
     
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
 	</span>
 
 
   </div>
   <div class="article-entry">
-    <h1 id="insertion-sort"><a class="markdownIt-Anchor" href="#insertion-sort"></a> Insertion Sort</h1>
-<blockquote>
-<p>Well this article is for testing codes 😃</p>
-</blockquote>
-<p>Here is the code:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        key = arr[i];</span><br><span class="line">        j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt; <span class="number">-1</span>) &amp;&amp; (arr[j] &gt; key) )</span><br><span class="line">        &#123;</span><br><span class="line">            arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <p>Some simple Haskell functions here 😃</p>
+<p><strong>Quick Sort</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">quicksort</span> :: (<span class="type">Ord</span> a) =&gt; [a] -&gt; [a]</span><br><span class="line"><span class="title">quicksort</span> [] = []</span><br><span class="line"><span class="title">quicksort</span> (x:xs) =</span><br><span class="line">    <span class="keyword">let</span> smallerSorted = quicksort (filter (&lt;=x) xs)  </span><br><span class="line">        biggerSorted = quicksort (filter (&gt;x) xs)</span><br><span class="line">    <span class="keyword">in</span>  smallerSorted ++ [x] ++ biggerSorted</span><br></pre></td></tr></table></figure>
+<p><strong>Fibonacci</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">fbci</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">0</span> = <span class="number">0</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">2</span> = <span class="number">1</span></span><br><span class="line"><span class="title">fbci</span> xx = fbci (xx<span class="number">-1</span>) + fbci (xx<span class="number">-2</span>)</span><br></pre></td></tr></table></figure>
   </div>
   <footer class="article-footer">
     
