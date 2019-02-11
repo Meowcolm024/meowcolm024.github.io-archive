@@ -8,17 +8,22 @@
 
 <title>
   
-    Archive: 2018/11
+    Euler 26 in Haskell
   
 </title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Meowcolm024">
-<meta property="og:url" content="http://yoursite.com/archives/2018/11/index.html">
+<meta name="description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
+<meta name="keywords" content="Haskell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Euler 26 in Haskell">
+<meta property="og:url" content="http://yoursite.com/2019/02/11/Euler-26-in-Haskell/index.html">
 <meta property="og:site_name" content="Meowcolm024">
+<meta property="og:description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-11T13:31:59.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Meowcolm024">
+<meta name="twitter:title" content="Euler 26 in Haskell">
+<meta name="twitter:description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
 
 
   <link rel="alternative" href="/atom.xml" title="Meowcolm024" type="application/atom+xml">
@@ -146,148 +151,62 @@
       
         <div style="max-width: 1000px">
       
-          
-
+          <article id="post-Euler-26-in-Haskell" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Euler 26 in Haskell
+    </h1>
   
   
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2018" class="archive-year">2018</a></h1>
-        </div>
-        <div class="post-list">
-    
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/11/29/Insertion-Sort/">
-  Insertion Sort
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/11/29/Insertion-Sort/"><span class="article-date">
-  2018-11-29
+  <div class="article-info">
+    <span class="article-date">
+  2019-02-11
 </span>
-</a>
-        
-	<span class="article-category tagcloud">
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Alogrithm/">Alogrithm</a></li></ul>
-	</span>
 
+    
 
-        
+    
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
 	</span>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="insertion-sort"><a class="markdownIt-Anchor" href="#insertion-sort"></a> Insertion Sort</h1>
-<blockquote>
-<p>Well this article is for testing codes 😃</p>
-</blockquote>
-<p>Here is the code:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        key = arr[i];</span><br><span class="line">        j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt; <span class="number">-1</span>) &amp;&amp; (arr[j] &gt; key) )</span><br><span class="line">        &#123;</span><br><span class="line">            arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      </div>
-    </div>
+  </div>
+  <div class="article-entry">
+    <h1 id="solving-euler-26-using-haskell"><a class="markdownIt-Anchor" href="#solving-euler-26-using-haskell"></a> Solving Euler 26 using Haskell</h1>
+<p>It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be transferred to a problem of finding the largest prime number which its reciprocal has the longest recurring cycle under 1,000.</p>
+<p>A question is also asked in <a href="https://stackoverflow.com/questions/54529273/euler-26-in-haskell" target="_blank" rel="noopener">Stack Overflow</a></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Reciprocal cycles</span></span><br><span class="line"></span><br><span class="line"><span class="title">isPrime</span> :: <span class="type">Integer</span> -&gt; <span class="type">Bool</span></span><br><span class="line"><span class="title">isPrime</span> k</span><br><span class="line">    | k &lt;= <span class="number">1</span>    = error <span class="string">"Seriously?"</span></span><br><span class="line">    | otherwise = null [ x | x &lt;- [<span class="number">2.</span>.floor(sqrt(fromIntegral k))], k `mod` x == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">lp</span> = [x | x &lt;- [<span class="number">7.</span><span class="number">.1000</span>], isPrime x]</span><br><span class="line"></span><br><span class="line"><span class="title">s</span> = map (\n -&gt; head [x | x &lt;- [ceiling(logBase <span class="number">10</span> (fromIntegral n))..], <span class="number">10</span>^x `mod` n == <span class="number">1</span>]) lp</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print $ maximum s <span class="comment">-- however it only prints the length, just use `elemIndex` to find the d</span></span><br></pre></td></tr></table></figure>
 
-  
-
-  
-  
+  </div>
+  <footer class="article-footer">
     
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/11/25/test/">
-  test
-</a>
-
-      </h3>
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.e" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
       
-
-      <div class="article-info">
-        <a href="/2018/11/25/test/"><span class="article-date">
-  2018-11-25
-</span>
-</a>
+          <img src="/images/cc/by.png">
         
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
 
-        
 
-      </div>
-      <div class="article-entry">
-        
-          <p>This article is only for testing.</p>
-<p>Testing extension here 😃</p>
-
-        
-      </div>
-    </div>
-
-  
-
-  
-  
     
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/11/25/hello-world/">
-  Hello World
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/11/25/hello-world/"><span class="article-date">
-  2018-11-25
-</span>
-</a>
-        
-
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-      </div>
-    </div>
-
-  
+  </footer>
+</article>
 
 
 
 
-</div></section>
+
+
 
           <div class="main-footer">
   

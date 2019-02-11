@@ -87,14 +87,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
               </li>
             
           
@@ -156,6 +156,49 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
+        <a href="/2019/02/11/Euler-26-in-Haskell/">
+  Euler 26 in Haskell
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/02/11/Euler-26-in-Haskell/"><span class="article-date">
+  2019-02-11
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="solving-euler-26-using-haskell"><a class="markdownIt-Anchor" href="#solving-euler-26-using-haskell"></a> Solving Euler 26 using Haskell</h1>
+<p>It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be transferred to a problem of finding the largest prime number which its reciprocal has the longest recurring cycle under 1,000.</p>
+<p>A question is also asked in <a href="https://stackoverflow.com/questions/54529273/euler-26-in-haskell" target="_blank" rel="noopener">Stack Overflow</a></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Reciprocal cycles</span></span><br><span class="line"></span><br><span class="line"><span class="title">isPrime</span> :: <span class="type">Integer</span> -&gt; <span class="type">Bool</span></span><br><span class="line"><span class="title">isPrime</span> k</span><br><span class="line">    | k &lt;= <span class="number">1</span>    = error <span class="string">"Seriously?"</span></span><br><span class="line">    | otherwise = null [ x | x &lt;- [<span class="number">2.</span>.floor(sqrt(fromIntegral k))], k `mod` x == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">lp</span> = [x | x &lt;- [<span class="number">7.</span><span class="number">.1000</span>], isPrime x]</span><br><span class="line"></span><br><span class="line"><span class="title">s</span> = map (\n -&gt; head [x | x &lt;- [ceiling(logBase <span class="number">10</span> (fromIntegral n))..], <span class="number">10</span>^x `mod` n == <span class="number">1</span>]) lp</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print $ maximum s <span class="comment">-- however it only prints the length, just use `elemIndex` to find the d</span></span><br></pre></td></tr></table></figure>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
         <a href="/2019/02/03/Euler-15-in-Haskell/">
   Euler 15 in Haskell
 </a>
@@ -181,7 +224,7 @@
         
           <h1 id="solving-euler-15-in-haskell"><a class="markdownIt-Anchor" href="#solving-euler-15-in-haskell"></a> Solving Euler #15 in Haskell</h1>
 <p>This is a efficient way to solve. See <a href="https://projecteuler.net/problem=15" target="_blank" rel="noopener">Problem</a>.</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Lattice paths</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Data.List</span><br><span class="line"><span class="title">findposition</span> number = (\(<span class="type">Just</span> i)-&gt;i) . findIndex (==number)</span><br><span class="line"><span class="title">getposition</span> number  = head . drop number</span><br><span class="line"></span><br><span class="line"><span class="title">count</span> :: [(<span class="type">Int</span>, <span class="type">Int</span>)] -&gt; [<span class="type">Int</span>] -&gt; (<span class="type">Int</span>,<span class="type">Int</span>) -&gt;  <span class="type">Int</span></span><br><span class="line"><span class="title">count</span> ps qs (x,y) </span><br><span class="line">    | x == <span class="number">0</span> || y == <span class="number">0</span>                 = <span class="number">1</span></span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c1 &amp;&amp; c2     = getposition (findposition (x,y<span class="number">-1</span>) ps) qs + getposition (findposition (x<span class="number">-1</span>,y) ps) qsß</span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c1 &amp;&amp; not c2 = getposition (findposition (x,y<span class="number">-1</span>) ps) qs + count ps qs (x<span class="number">-1</span>,y)</span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c2 &amp;&amp; not c1 = count ps qs (x,y<span class="number">-1</span>) + getposition (findposition (x<span class="number">-1</span>,y) ps) qs</span><br><span class="line">    | otherwise                        = count ps qs (x<span class="number">-1</span>,y) + count ps qs (x,y<span class="number">-1</span>)</span><br><span class="line">    <span class="keyword">where</span> c1 = (x,y<span class="number">-1</span>) `elem` ps</span><br><span class="line">          c2 = (x<span class="number">-1</span>,y) `elem` ps</span><br><span class="line"></span><br><span class="line"><span class="title">latt</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span> -&gt; [<span class="type">Int</span>] -&gt; [<span class="type">Int</span>]</span><br><span class="line"><span class="title">latt</span> m n xs</span><br><span class="line">    | n &lt; m     = latt m (n+<span class="number">1</span>) q</span><br><span class="line">    | otherwise = q</span><br><span class="line">    <span class="keyword">where</span> lp = [(x,y) | x &lt;- [<span class="number">1.</span>.n<span class="number">-1</span>], y &lt;- [<span class="number">1.</span>.n<span class="number">-1</span>]]</span><br><span class="line">          p  = [(x,y) | x &lt;- [<span class="number">1.</span>.n], y &lt;- [<span class="number">1.</span>.n]]</span><br><span class="line">          q  = map (count lp xs) p</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print (last (latt <span class="number">20</span> <span class="number">1</span> []))</span><br></pre></td></tr></table></figure>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Lattice paths</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Data.List</span><br><span class="line"><span class="title">findposition</span> number = (\(<span class="type">Just</span> i)-&gt;i) . findIndex (==number)</span><br><span class="line"><span class="title">getposition</span> number  = head . drop number</span><br><span class="line"></span><br><span class="line"><span class="title">count</span> :: [(<span class="type">Int</span>, <span class="type">Int</span>)] -&gt; [<span class="type">Int</span>] -&gt; (<span class="type">Int</span>,<span class="type">Int</span>) -&gt;  <span class="type">Int</span></span><br><span class="line"><span class="title">count</span> ps qs (x,y) </span><br><span class="line">    | x == <span class="number">0</span> || y == <span class="number">0</span>                 = <span class="number">1</span></span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c1 &amp;&amp; c2     = getposition (findposition (x,y<span class="number">-1</span>) ps) qs + getposition (findposition (x<span class="number">-1</span>,y) ps) qs</span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c1 &amp;&amp; not c2 = getposition (findposition (x,y<span class="number">-1</span>) ps) qs + count ps qs (x<span class="number">-1</span>,y)</span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c2 &amp;&amp; not c1 = count ps qs (x,y<span class="number">-1</span>) + getposition (findposition (x<span class="number">-1</span>,y) ps) qs</span><br><span class="line">    | otherwise                        = count ps qs (x<span class="number">-1</span>,y) + count ps qs (x,y<span class="number">-1</span>)</span><br><span class="line">    <span class="keyword">where</span> c1 = (x,y<span class="number">-1</span>) `elem` ps</span><br><span class="line">          c2 = (x<span class="number">-1</span>,y) `elem` ps</span><br><span class="line"></span><br><span class="line"><span class="title">latt</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span> -&gt; [<span class="type">Int</span>] -&gt; [<span class="type">Int</span>]</span><br><span class="line"><span class="title">latt</span> m n xs</span><br><span class="line">    | n &lt; m     = latt m (n+<span class="number">1</span>) q</span><br><span class="line">    | otherwise = q</span><br><span class="line">    <span class="keyword">where</span> lp = [(x,y) | x &lt;- [<span class="number">1.</span>.n<span class="number">-1</span>], y &lt;- [<span class="number">1.</span>.n<span class="number">-1</span>]]</span><br><span class="line">          p  = [(x,y) | x &lt;- [<span class="number">1.</span>.n], y &lt;- [<span class="number">1.</span>.n]]</span><br><span class="line">          q  = map (count lp xs) p</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print (last (latt <span class="number">20</span> <span class="number">1</span> []))</span><br></pre></td></tr></table></figure>
         
       </div>
     </div>
