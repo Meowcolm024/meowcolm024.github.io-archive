@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/03/09/Functional-Programming-is-elegant/</loc>
+    
+    <lastmod>2019-03-09T12:53:36.330Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2019-02-11T13:57:20.318Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/02/11/Euler-26-in-Haskell/</loc>
     
     <lastmod>2019-02-11T13:31:59.785Z</lastmod>
@@ -47,13 +61,6 @@
     <loc>http://yoursite.com/2018/12/02/FGO-Script/</loc>
     
     <lastmod>2018-12-02T03:53:31.047Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2018-12-02T02:35:13.355Z</lastmod>
     
   </url>
   

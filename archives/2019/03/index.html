@@ -8,13 +8,13 @@
 
 <title>
   
-    Tag: Haskell
+    Archive: 2019/3
   
 </title>
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Meowcolm024">
-<meta property="og:url" content="http://yoursite.com/tags/Haskell/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
 <meta property="og:site_name" content="Meowcolm024">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -146,12 +146,19 @@
       
         <div style="max-width: 1000px">
       
-          <h1>Haskell</h1>
-
+          
 
   
   
-    <div class="post-list">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2019" class="archive-year">2019</a></h1>
+        </div>
+        <div class="post-list">
+    
   
 
     <div class="post-list-item article">
@@ -216,187 +223,11 @@ The alogrithm mainly works like this:</p>
     </div>
 
   
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2019/02/11/Euler-26-in-Haskell/">
-  Euler 26 in Haskell
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2019/02/11/Euler-26-in-Haskell/"><span class="article-date">
-  2019-02-11
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="solving-euler-26-using-haskell"><a class="markdownIt-Anchor" href="#solving-euler-26-using-haskell"></a> Solving Euler 26 using Haskell</h1>
-<p>It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be transferred to a problem of finding the largest prime number which its reciprocal has the longest recurring cycle under 1,000.</p>
-<p>A question is also asked in <a href="https://stackoverflow.com/questions/54529273/euler-26-in-haskell" target="_blank" rel="noopener">Stack Overflow</a></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Reciprocal cycles</span></span><br><span class="line"></span><br><span class="line"><span class="title">isPrime</span> :: <span class="type">Integer</span> -&gt; <span class="type">Bool</span></span><br><span class="line"><span class="title">isPrime</span> k</span><br><span class="line">    | k &lt;= <span class="number">1</span>    = error <span class="string">"Seriously?"</span></span><br><span class="line">    | otherwise = null [ x | x &lt;- [<span class="number">2.</span>.floor(sqrt(fromIntegral k))], k `mod` x == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">lp</span> = [x | x &lt;- [<span class="number">7.</span><span class="number">.1000</span>], isPrime x]</span><br><span class="line"></span><br><span class="line"><span class="title">s</span> = map (\n -&gt; head [x | x &lt;- [ceiling(logBase <span class="number">10</span> (fromIntegral n))..], <span class="number">10</span>^x `mod` n == <span class="number">1</span>]) lp</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print $ maximum s <span class="comment">-- however it only prints the length, just use `elemIndex` to find the d</span></span><br></pre></td></tr></table></figure>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2019/02/03/Euler-15-in-Haskell/">
-  Euler 15 in Haskell
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2019/02/03/Euler-15-in-Haskell/"><span class="article-date">
-  2019-02-03
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="solving-euler-15-in-haskell"><a class="markdownIt-Anchor" href="#solving-euler-15-in-haskell"></a> Solving Euler #15 in Haskell</h1>
-<p>This is a efficient way to solve. See <a href="https://projecteuler.net/problem=15" target="_blank" rel="noopener">Problem</a>.</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Lattice paths</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Data.List</span><br><span class="line"><span class="title">findposition</span> number = (\(<span class="type">Just</span> i)-&gt;i) . findIndex (==number)</span><br><span class="line"><span class="title">getposition</span> number  = head . drop number</span><br><span class="line"></span><br><span class="line"><span class="title">count</span> :: [(<span class="type">Int</span>, <span class="type">Int</span>)] -&gt; [<span class="type">Int</span>] -&gt; (<span class="type">Int</span>,<span class="type">Int</span>) -&gt;  <span class="type">Int</span></span><br><span class="line"><span class="title">count</span> ps qs (x,y) </span><br><span class="line">    | x == <span class="number">0</span> || y == <span class="number">0</span>                 = <span class="number">1</span></span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c1 &amp;&amp; c2     = getposition (findposition (x,y<span class="number">-1</span>) ps) qs + getposition (findposition (x<span class="number">-1</span>,y) ps) qs</span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c1 &amp;&amp; not c2 = getposition (findposition (x,y<span class="number">-1</span>) ps) qs + count ps qs (x<span class="number">-1</span>,y)</span><br><span class="line">    | (<span class="number">0</span> &lt; y || <span class="number">0</span> &lt; x) &amp;&amp; c2 &amp;&amp; not c1 = count ps qs (x,y<span class="number">-1</span>) + getposition (findposition (x<span class="number">-1</span>,y) ps) qs</span><br><span class="line">    | otherwise                        = count ps qs (x<span class="number">-1</span>,y) + count ps qs (x,y<span class="number">-1</span>)</span><br><span class="line">    <span class="keyword">where</span> c1 = (x,y<span class="number">-1</span>) `elem` ps</span><br><span class="line">          c2 = (x<span class="number">-1</span>,y) `elem` ps</span><br><span class="line"></span><br><span class="line"><span class="title">latt</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span> -&gt; [<span class="type">Int</span>] -&gt; [<span class="type">Int</span>]</span><br><span class="line"><span class="title">latt</span> m n xs</span><br><span class="line">    | n &lt; m     = latt m (n+<span class="number">1</span>) q</span><br><span class="line">    | otherwise = q</span><br><span class="line">    <span class="keyword">where</span> lp = [(x,y) | x &lt;- [<span class="number">1.</span>.n<span class="number">-1</span>], y &lt;- [<span class="number">1.</span>.n<span class="number">-1</span>]]</span><br><span class="line">          p  = [(x,y) | x &lt;- [<span class="number">1.</span>.n], y &lt;- [<span class="number">1.</span>.n]]</span><br><span class="line">          q  = map (count lp xs) p</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print (last (latt <span class="number">20</span> <span class="number">1</span> []))</span><br></pre></td></tr></table></figure>
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2019/01/29/Learning-Haskell/">
-  Learning Haskell
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2019/01/29/Learning-Haskell/"><span class="article-date">
-  2019-01-29
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <p>Some simple Haskell functions here 😃</p>
-<p><strong>Quick Sort</strong></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">quicksort</span> :: (<span class="type">Ord</span> a) =&gt; [a] -&gt; [a]</span><br><span class="line"><span class="title">quicksort</span> [] = []</span><br><span class="line"><span class="title">quicksort</span> (x:xs) =</span><br><span class="line">    <span class="keyword">let</span> smallerSorted = quicksort (filter (&lt;=x) xs)  </span><br><span class="line">        biggerSorted = quicksort (filter (&gt;x) xs)</span><br><span class="line">    <span class="keyword">in</span>  smallerSorted ++ [x] ++ biggerSorted</span><br></pre></td></tr></table></figure>
-<p><strong>Fibonacci</strong></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">fbci</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">0</span> = <span class="number">0</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">2</span> = <span class="number">1</span></span><br><span class="line"><span class="title">fbci</span> xx = fbci (xx<span class="number">-1</span>) + fbci (xx<span class="number">-2</span>)</span><br></pre></td></tr></table></figure>
-<p><strong>A Traditional way to calculate GCD</strong></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">mygcd</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span> -&gt; <span class="type">Int</span></span><br><span class="line"><span class="title">mygcd</span> x y </span><br><span class="line">    | (p &gt; <span class="number">0</span>) &amp;&amp; (p /= y) = mygcd p y</span><br><span class="line">    | (p &lt; <span class="number">0</span>) &amp;&amp; (p /= x) = mygcd (-p) x</span><br><span class="line">    | otherwise = p</span><br><span class="line">    <span class="keyword">where</span> p = x - y</span><br></pre></td></tr></table></figure>
-<p><strong>A use of pattern matching</strong></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">bmiTell</span> :: (<span class="type">RealFloat</span> a) =&gt; a -&gt; a -&gt; <span class="type">String</span>  </span><br><span class="line"><span class="title">bmiTell</span> weight height  </span><br><span class="line">    | bmi &lt;= skinny = <span class="string">"You're underweight, you emo, you!"</span>  </span><br><span class="line">    | bmi &lt;= normal = <span class="string">"You're supposedly normal. Pffft, I bet you're ugly!"</span>  </span><br><span class="line">    | bmi &lt;= fat    = <span class="string">"You're fat! Lose some weight, fatty!"</span>  </span><br><span class="line">    | otherwise     = <span class="string">"You're a whale, congratulations!"</span>  </span><br><span class="line">    <span class="keyword">where</span> bmi = weight / height ^ <span class="number">2</span>  </span><br><span class="line">          skinny = <span class="number">18.5</span>  </span><br><span class="line">          normal = <span class="number">25.0</span>  </span><br><span class="line">          fat = <span class="number">30.0</span></span><br></pre></td></tr></table></figure>
-<p><strong>A interesting function</strong></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chain</span> :: (<span class="type">Integral</span> a) =&gt; a -&gt; [a]  </span><br><span class="line"><span class="title">chain</span> <span class="number">1</span> = [<span class="number">1</span>]  </span><br><span class="line"><span class="title">chain</span> n  </span><br><span class="line">    | even n =  n:chain (n `div` <span class="number">2</span>)  </span><br><span class="line">    | odd n  =  n:chain (n*<span class="number">3</span> + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/12/16/Pythagorean-Triples/">
-  Pythagorean Triples
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/12/16/Pythagorean-Triples/"><span class="article-date">
-  2018-12-16
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <p>It is really insteresting that only using one line of <em>Haskell</em> code could create a list of <em>Pythagorean Triples</em>.<br>
-Copy and paste it to GHCi 😃</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[((p^<span class="number">2</span> - q^<span class="number">2</span>),(<span class="number">2</span>*p*q), sqrt((p^<span class="number">2</span> - q^<span class="number">2</span>)^<span class="number">2</span> + (<span class="number">2</span>*p*q)^<span class="number">2</span>)) | p &lt;- [<span class="number">1.</span><span class="number">.5</span>], q &lt;- [<span class="number">1.</span><span class="number">.5</span>], p &gt; q]</span><br></pre></td></tr></table></figure>
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
 
 
 
 
-
+</div></section>
 
           <div class="main-footer">
   
