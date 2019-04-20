@@ -12,18 +12,18 @@
   
 </title>
 
-<meta name="description" content="Reverse a linked list This is recursive function of reversing a linked list 😃 123456789101112131415161718class ListNode &amp;#123;     int val;    ListNode next;      ListNode(int x) &amp;#123; val = x; &amp;#1">
+<meta name="description" content="This is recursive function of reversing a linked list 😃 123456789101112131415161718class ListNode &amp;#123;     int val;    ListNode next;      ListNode(int x) &amp;#123; val = x; &amp;#125;  &amp;#125;class Soluti">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Reverse a linked list">
 <meta property="og:url" content="http://yoursite.com/2019/04/20/Reverse-a-linked-list/index.html">
 <meta property="og:site_name" content="Meowcolm024">
-<meta property="og:description" content="Reverse a linked list This is recursive function of reversing a linked list 😃 123456789101112131415161718class ListNode &amp;#123;     int val;    ListNode next;      ListNode(int x) &amp;#123; val = x; &amp;#1">
+<meta property="og:description" content="This is recursive function of reversing a linked list 😃 123456789101112131415161718class ListNode &amp;#123;     int val;    ListNode next;      ListNode(int x) &amp;#123; val = x; &amp;#125;  &amp;#125;class Soluti">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-20T12:22:27.133Z">
+<meta property="og:updated_time" content="2019-04-20T12:32:12.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reverse a linked list">
-<meta name="twitter:description" content="Reverse a linked list This is recursive function of reversing a linked list 😃 123456789101112131415161718class ListNode &amp;#123;     int val;    ListNode next;      ListNode(int x) &amp;#123; val = x; &amp;#1">
+<meta name="twitter:description" content="This is recursive function of reversing a linked list 😃 123456789101112131415161718class ListNode &amp;#123;     int val;    ListNode next;      ListNode(int x) &amp;#123; val = x; &amp;#125;  &amp;#125;class Soluti">
 
 
   <link rel="alternative" href="/atom.xml" title="Meowcolm024" type="application/atom+xml">
@@ -85,7 +85,7 @@
             
               <li class="category-list-container">
                 <a href="javascript:;">Category</a>
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fate/">Fate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a><span class="category-list-count">1</span></li></ul>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fate/">Fate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a><span class="category-list-count">1</span></li></ul>
               </li>
             
           
@@ -178,8 +178,7 @@
 
   </div>
   <div class="article-entry">
-    <h1 id="reverse-a-linked-list"><a class="markdownIt-Anchor" href="#reverse-a-linked-list"></a> Reverse a linked list</h1>
-<p>This is recursive function of reversing a linked list 😃</p>
+    <p>This is recursive function of reversing a linked list 😃</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">      ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head.next == <span class="keyword">null</span>) &#123;<span class="keyword">return</span> head;&#125;</span><br><span class="line">        ListNode x = reverseList(head.next);</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode i = x;</span><br><span class="line">        <span class="keyword">while</span> (i.next != <span class="keyword">null</span>) &#123; i = i.next;&#125;</span><br><span class="line">        i.next = head;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
   <footer class="article-footer">

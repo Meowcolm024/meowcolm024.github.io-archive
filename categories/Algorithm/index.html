@@ -80,7 +80,7 @@
             
               <li class="category-list-container">
                 <a href="javascript:;">Category</a>
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogrithm/">Alogrithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fate/">Fate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a><span class="category-list-count">1</span></li></ul>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fate/">Fate</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Functional-Programming/">Functional Programming</a><span class="category-list-count">1</span></li></ul>
               </li>
             
           
@@ -183,9 +183,102 @@
       </div>
       <div class="article-entry">
         
-          <h1 id="reverse-a-linked-list"><a class="markdownIt-Anchor" href="#reverse-a-linked-list"></a> Reverse a linked list</h1>
-<p>This is recursive function of reversing a linked list 😃</p>
+          <p>This is recursive function of reversing a linked list 😃</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">      ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head.next == <span class="keyword">null</span>) &#123;<span class="keyword">return</span> head;&#125;</span><br><span class="line">        ListNode x = reverseList(head.next);</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode i = x;</span><br><span class="line">        <span class="keyword">while</span> (i.next != <span class="keyword">null</span>) &#123; i = i.next;&#125;</span><br><span class="line">        i.next = head;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/12/01/Merge-Sort/">
+  Merge Sort
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/12/01/Merge-Sort/"><span class="article-date">
+  2018-12-01
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Algorithm/">Algorithm</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <blockquote>
+<p>Well, testing pictures XD</p>
+</blockquote>
+<p><img src="https://cppbetterexplained.com/wp-content/uploads/2016/06/merge-sort-algorithm-diagram.png" alt="Merge Sort"></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/11/29/Insertion-Sort/">
+  Insertion Sort
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/11/29/Insertion-Sort/"><span class="article-date">
+  2018-11-29
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Algorithm/">Algorithm</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <blockquote>
+<p>Well this article is for testing codes 😃</p>
+</blockquote>
+<p>Here is the code:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        key = arr[i];</span><br><span class="line">        j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt; <span class="number">-1</span>) &amp;&amp; (arr[j] &gt; key) )</span><br><span class="line">        &#123;</span><br><span class="line">            arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       </div>
     </div>

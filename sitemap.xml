@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2019/04/20/Reverse-a-linked-list/</loc>
+    <loc>http://yoursite.com/2019/03/09/Functional-Programming-is-elegant/</loc>
     
-    <lastmod>2019-04-20T12:22:27.133Z</lastmod>
+    <lastmod>2019-04-20T12:32:15.508Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/03/09/Functional-Programming-is-elegant/</loc>
+    <loc>http://yoursite.com/2018/12/01/Merge-Sort/</loc>
     
-    <lastmod>2019-03-09T12:53:36.330Z</lastmod>
+    <lastmod>2019-04-20T12:32:14.078Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/04/20/Reverse-a-linked-list/</loc>
+    
+    <lastmod>2019-04-20T12:32:12.653Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/11/29/Insertion-Sort/</loc>
+    
+    <lastmod>2019-04-20T12:32:07.966Z</lastmod>
     
   </url>
   
@@ -68,20 +82,6 @@
     <loc>http://yoursite.com/2018/12/02/FGO-Script/</loc>
     
     <lastmod>2018-12-02T03:53:31.047Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/12/01/Merge-Sort/</loc>
-    
-    <lastmod>2018-12-01T07:19:29.335Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/11/29/Insertion-Sort/</loc>
-    
-    <lastmod>2018-11-30T14:24:58.610Z</lastmod>
     
   </url>
   
