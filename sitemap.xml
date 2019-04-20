@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/04/20/Reverse-a-linked-list/</loc>
+    
+    <lastmod>2019-04-20T12:22:27.133Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/03/09/Functional-Programming-is-elegant/</loc>
     
     <lastmod>2019-03-09T12:53:36.330Z</lastmod>

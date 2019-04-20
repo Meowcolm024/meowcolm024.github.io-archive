@@ -8,21 +8,17 @@
 
 <title>
   
-    test
+    Tag: Java
   
 </title>
 
-<meta name="description" content="This article is only for testing. Testing extension here 😃">
-<meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2018/11/25/test/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meowcolm024">
+<meta property="og:url" content="http://yoursite.com/tags/Java/index.html">
 <meta property="og:site_name" content="Meowcolm024">
-<meta property="og:description" content="This article is only for testing. Testing extension here 😃">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-29T11:50:00.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="This article is only for testing. Testing extension here 😃">
+<meta name="twitter:title" content="Meowcolm024">
 
 
   <link rel="alternative" href="/atom.xml" title="Meowcolm024" type="application/atom+xml">
@@ -150,51 +146,53 @@
       
         <div style="max-width: 1000px">
       
-          <article id="post-test" class="article article-type-post">
+          <h1>Java</h1>
+
+
   
-    <h1 class="article-header">
-      test
-    </h1>
   
+    <div class="post-list">
   
 
-  <div class="article-info">
-    <span class="article-date">
-  2018-11-25
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/04/20/Reverse-a-linked-list/">
+  Reverse a linked list
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/04/20/Reverse-a-linked-list/"><span class="article-date">
+  2019-04-20
 </span>
-
-    
-
-    
-
-  </div>
-  <div class="article-entry">
-    <p>This article is only for testing.</p>
-<p>Testing extension here 😃</p>
-
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.e" target="_blank" title="Attribution-ShareAlike">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
+</a>
         
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-      </span>
-    </a>
-  </div>
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Algorithm/">Algorithm</a></li></ul>
+	</span>
 
 
-    
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	</span>
 
-  </footer>
-</article>
 
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="reverse-a-linked-list"><a class="markdownIt-Anchor" href="#reverse-a-linked-list"></a> Reverse a linked list</h1>
+<p>This is recursive function of reversing a linked list 😃</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">      ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head.next == <span class="keyword">null</span>) &#123;<span class="keyword">return</span> head;&#125;</span><br><span class="line">        ListNode x = reverseList(head.next);</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode i = x;</span><br><span class="line">        <span class="keyword">while</span> (i.next != <span class="keyword">null</span>) &#123; i = i.next;&#125;</span><br><span class="line">        i.next = head;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
 
 

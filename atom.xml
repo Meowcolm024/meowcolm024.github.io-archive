@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-09T12:53:36.330Z</updated>
+  <updated>2019-04-20T12:22:27.133Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reverse a linked list</title>
+    <link href="http://yoursite.com/2019/04/20/Reverse-a-linked-list/"/>
+    <id>http://yoursite.com/2019/04/20/Reverse-a-linked-list/</id>
+    <published>2019-04-20T12:17:09.000Z</published>
+    <updated>2019-04-20T12:22:27.133Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="reverse-a-linked-list"><a class="markdownIt-Anchor" href="#reverse-a-linked-list"></a> Reverse a linked list</h1><p>This is recursive function of reversing a linked list 😃</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">      ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head.next == <span class="keyword">null</span>) &#123;<span class="keyword">return</span> head;&#125;</span><br><span class="line">        ListNode x = reverseList(head.next);</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode i = x;</span><br><span class="line">        <span class="keyword">while</span> (i.next != <span class="keyword">null</span>) &#123; i = i.next;&#125;</span><br><span class="line">        i.next = head;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;reverse-a-linked-list&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#reverse-a-linked-list&quot;&gt;&lt;/a&gt; Reverse a linked list&lt;/h1&gt;
+&lt;p&gt;This is recursi
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Functional Programming is elegant</title>
