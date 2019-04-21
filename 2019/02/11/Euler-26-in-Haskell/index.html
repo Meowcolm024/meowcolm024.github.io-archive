@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Meowcolm024">
 <meta property="og:description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-11T13:31:59.785Z">
+<meta property="og:updated_time" content="2019-04-21T03:04:09.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Euler 26 in Haskell">
 <meta name="twitter:description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
@@ -174,7 +174,7 @@
 
   </div>
   <div class="article-entry">
-    <h1 id="solving-euler-26-using-haskell"><a class="markdownIt-Anchor" href="#solving-euler-26-using-haskell"></a> Solving Euler 26 using Haskell</h1>
+    <h2 id="solving-euler-26-using-haskell"><a class="markdownIt-Anchor" href="#solving-euler-26-using-haskell"></a> Solving Euler 26 using Haskell</h2>
 <p>It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be transferred to a problem of finding the largest prime number which its reciprocal has the longest recurring cycle under 1,000.</p>
 <p>A question is also asked in <a href="https://stackoverflow.com/questions/54529273/euler-26-in-haskell" target="_blank" rel="noopener">Stack Overflow</a></p>
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Reciprocal cycles</span></span><br><span class="line"></span><br><span class="line"><span class="title">isPrime</span> :: <span class="type">Integer</span> -&gt; <span class="type">Bool</span></span><br><span class="line"><span class="title">isPrime</span> k</span><br><span class="line">    | k &lt;= <span class="number">1</span>    = error <span class="string">"Seriously?"</span></span><br><span class="line">    | otherwise = null [ x | x &lt;- [<span class="number">2.</span>.floor(sqrt(fromIntegral k))], k `mod` x == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">lp</span> = [x | x &lt;- [<span class="number">7.</span><span class="number">.1000</span>], isPrime x]</span><br><span class="line"></span><br><span class="line"><span class="title">s</span> = map (\n -&gt; head [x | x &lt;- [ceiling(logBase <span class="number">10</span> (fromIntegral n))..], <span class="number">10</span>^x `mod` n == <span class="number">1</span>]) lp</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print $ maximum s <span class="comment">-- however it only prints the length, just use `elemIndex` to find the d</span></span><br></pre></td></tr></table></figure>

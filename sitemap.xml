@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/02/11/Euler-26-in-Haskell/</loc>
+    
+    <lastmod>2019-04-21T03:04:09.772Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/02/03/Euler-15-in-Haskell/</loc>
+    
+    <lastmod>2019-04-21T03:04:08.667Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/04/20/Reverse-a-linked-list/</loc>
+    
+    <lastmod>2019-04-20T12:33:00.140Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/03/09/Functional-Programming-is-elegant/</loc>
     
     <lastmod>2019-04-20T12:32:15.508Z</lastmod>
@@ -16,13 +37,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/04/20/Reverse-a-linked-list/</loc>
-    
-    <lastmod>2019-04-20T12:32:12.653Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/11/29/Insertion-Sort/</loc>
     
     <lastmod>2019-04-20T12:32:07.966Z</lastmod>
@@ -33,20 +47,6 @@
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2019-02-11T13:57:20.318Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/02/11/Euler-26-in-Haskell/</loc>
-    
-    <lastmod>2019-02-11T13:31:59.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/02/03/Euler-15-in-Haskell/</loc>
-    
-    <lastmod>2019-02-03T04:00:39.360Z</lastmod>
     
   </url>
   
