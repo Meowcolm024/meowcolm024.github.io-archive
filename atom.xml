@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-03T13:05:10.456Z</updated>
+  <updated>2019-08-24T09:24:37.866Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>YoRHa-Manic</title>
+    <link href="http://yoursite.com/2019/08/24/YoRHa-Manic/"/>
+    <id>http://yoursite.com/2019/08/24/YoRHa-Manic/</id>
+    <published>2019-08-24T09:20:50.000Z</published>
+    <updated>2019-08-24T09:24:37.866Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/Meowcolm024/YoRHa-Manic/master/assets/end.jpeg" alt="guda"></p><p>YoRHa-Manic is a silly shooting game I wrote using <em>Pygame</em>.<br>Codes could be viewes <a href="https://github.com/Meowcolm024/YoRHa-Manic" target="_blank" rel="noopener">here</a>.</p><p>More things will be added later.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Meowcolm024/YoRHa-Manic/master/assets/end.jpeg&quot; alt=&quot;guda&quot;&gt;&lt;/p&gt;
+&lt;p&gt;YoRHa-Manic is a silly sho
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Maximum Depth of Binary Tree</title>
