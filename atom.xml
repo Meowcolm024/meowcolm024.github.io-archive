@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-24T09:24:37.866Z</updated>
+  <updated>2019-09-12T09:46:02.425Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-one</title>
+    <link href="http://yoursite.com/2019/09/12/hexo-one/"/>
+    <id>http://yoursite.com/2019/09/12/hexo-one/</id>
+    <published>2019-09-12T09:37:24.000Z</published>
+    <updated>2019-09-12T09:46:02.425Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://meowcolm024.gallerycdn.vsassets.io/extensions/meowcolm024/hexo-one/0.0.9/1567156293001/Microsoft.VisualStudio.Services.Icons.Default" alt="logo"></p><p><strong>hexo-one</strong> is a simple extension for easier Hexo usage.</p><p>It allows you to create new <em>Hexo</em> post, draft or page easily. There are also shortcuts for deploying <em>Hexo</em>.</p><p>Besides, you can also execute the publish command and other commands using it.</p><p>Checkout the <a href="https://marketplace.visualstudio.com/items?itemName=Meowcolm024.hexo-one" target="_blank" rel="noopener">Marketplace</a> or <a href="https://github.com/Meowcolm024/hexo-one" target="_blank" rel="noopener">GitHub</a>. For more detail 😃</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://meowcolm024.gallerycdn.vsassets.io/extensions/meowcolm024/hexo-one/0.0.9/1567156293001/Microsoft.VisualStudio.Services.
+      
+    
+    </summary>
+    
+      <category term="VSCode" scheme="http://yoursite.com/categories/VSCode/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>YoRHa-Manic</title>
