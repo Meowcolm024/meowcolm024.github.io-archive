@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-12T09:46:02.425Z</updated>
+  <updated>2019-09-12T11:32:02.992Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Haskell Syntax Highlight test</title>
+    <link href="http://yoursite.com/2019/09/12/Haskell-Syntax-Highlight-test/"/>
+    <id>http://yoursite.com/2019/09/12/Haskell-Syntax-Highlight-test/</id>
+    <published>2019-09-12T11:30:08.000Z</published>
+    <updated>2019-09-12T11:32:02.992Z</updated>
+    
+    <content type="html"><![CDATA[<p>Code from <a href="https://github.com/Meowcolm024/lost-avalon" target="_blank" rel="noopener">lost-avalon</a></p><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">someFunc</span> :: <span class="type">IO</span> ()</span><br><span class="line"><span class="title">someFunc</span> = <span class="keyword">do</span></span><br><span class="line">    (name:args) &lt;- getArgs</span><br><span class="line">    handle      &lt;- openFile name <span class="type">ReadMode</span>  </span><br><span class="line">    contents    &lt;- hGetContents handle</span><br><span class="line">    <span class="keyword">let</span> codes   = getVal $ parseTo $ contents ++ <span class="string">"\n"</span></span><br><span class="line">    <span class="keyword">let</span> vars    = transVar $ findVar codes</span><br><span class="line">    <span class="keyword">let</span> fcs     = transFC funkey (findFC funkey codes) ++ transFC classkey (findFC classkey codes)</span><br><span class="line">    writeFile (takeWhile (/= '.') name ++ <span class="string">".py"</span>) $ parseBack (map (`replaceList` (keywords ++ vars ++ fcs)) codes)</span><br><span class="line">    hClose handle</span><br></pre></td></tr></table></figure><p>Another one:</p><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- replace Wenyan sytax with Python syntax</span></span><br><span class="line"><span class="title">replace</span> :: (<span class="type">Eq</span> a) =&gt; a -&gt; [(a, a)] -&gt; a</span><br><span class="line"><span class="title">replace</span> x ((a, b):ys)</span><br><span class="line">    | x == a             = b</span><br><span class="line">    | x /= a &amp;&amp; ys /= [] = replace x ys</span><br><span class="line">    | otherwise          = x</span><br><span class="line"></span><br><span class="line"><span class="title">replaceList</span> :: (<span class="type">Eq</span> a) =&gt; [a] -&gt; [(a, a)] -&gt; [a]</span><br><span class="line"><span class="title">replaceList</span> [] _  = []</span><br><span class="line"><span class="title">replaceList</span> xs ys = map (`replace` ys) xs</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Code from &lt;a href=&quot;https://github.com/Meowcolm024/lost-avalon&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;lost-avalon&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highligh
+      
+    
+    </summary>
+    
+    
+      <category term="Haskell" scheme="http://yoursite.com/tags/Haskell/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-one</title>

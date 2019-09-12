@@ -8,17 +8,22 @@
 
 <title>
   
-    Tag: Java
+    Haskell Syntax Highlight test
   
 </title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Meowcolm024">
-<meta property="og:url" content="http://yoursite.com/tags/Java/index.html">
+<meta name="description" content="Code from lost-avalon 12345678910someFunc :: IO ()someFunc = do    (name:args) &amp;lt;- getArgs    handle      &amp;lt;- openFile name ReadMode      contents    &amp;lt;- hGetContents handle    let codes   = get">
+<meta name="keywords" content="Haskell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Haskell Syntax Highlight test">
+<meta property="og:url" content="http://yoursite.com/2019/09/12/Haskell-Syntax-Highlight-test/index.html">
 <meta property="og:site_name" content="Meowcolm024">
+<meta property="og:description" content="Code from lost-avalon 12345678910someFunc :: IO ()someFunc = do    (name:args) &amp;lt;- getArgs    handle      &amp;lt;- openFile name ReadMode      contents    &amp;lt;- hGetContents handle    let codes   = get">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-12T11:32:02.992Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Meowcolm024">
+<meta name="twitter:title" content="Haskell Syntax Highlight test">
+<meta name="twitter:description" content="Code from lost-avalon 12345678910someFunc :: IO ()someFunc = do    (name:args) &amp;lt;- getArgs    handle      &amp;lt;- openFile name ReadMode      contents    &amp;lt;- hGetContents handle    let codes   = get">
 
 
   <link rel="alternative" href="/atom.xml" title="Meowcolm024" type="application/atom+xml">
@@ -146,54 +151,57 @@
       
         <div style="max-width: 1000px">
       
-          <h1>Java</h1>
-
-
+          <article id="post-Haskell-Syntax-Highlight-test" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Haskell Syntax Highlight test
+    </h1>
   
   
-    <div class="post-list">
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2019/04/20/Reverse-a-linked-list/">
-  Reverse a linked list
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2019/04/20/Reverse-a-linked-list/"><span class="article-date">
-  2019-04-20
+  <div class="article-info">
+    <span class="article-date">
+  2019-09-12
 </span>
-</a>
-        
-	<span class="article-category tagcloud">
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Algorithm/">Algorithm</a></li></ul>
-	</span>
 
+    
 
-        
+    
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
 	</span>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <p>This is a recursive function of reversing a linked list 😃</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head.next == <span class="keyword">null</span> || head == <span class="keyword">null</span>) &#123;<span class="keyword">return</span> head;&#125;</span><br><span class="line">        ListNode x = reverseList(head.next);</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        ListNode i = x;</span><br><span class="line">        <span class="keyword">while</span> (i.next != <span class="keyword">null</span>) &#123; i = i.next;&#125;</span><br><span class="line">        i.next = head;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Basically, what the code does is reversing the first node and the rest recusively. And edge condition is that the node’s next is <em>null</em> (or it is the end of the linked list).</p>
+  </div>
+  <div class="article-entry">
+    <p>Code from <a href="https://github.com/Meowcolm024/lost-avalon" target="_blank" rel="noopener">lost-avalon</a></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">someFunc</span> :: <span class="type">IO</span> ()</span><br><span class="line"><span class="title">someFunc</span> = <span class="keyword">do</span></span><br><span class="line">    (name:args) &lt;- getArgs</span><br><span class="line">    handle      &lt;- openFile name <span class="type">ReadMode</span>  </span><br><span class="line">    contents    &lt;- hGetContents handle</span><br><span class="line">    <span class="keyword">let</span> codes   = getVal $ parseTo $ contents ++ <span class="string">"\n"</span></span><br><span class="line">    <span class="keyword">let</span> vars    = transVar $ findVar codes</span><br><span class="line">    <span class="keyword">let</span> fcs     = transFC funkey (findFC funkey codes) ++ transFC classkey (findFC classkey codes)</span><br><span class="line">    writeFile (takeWhile (/= '.') name ++ <span class="string">".py"</span>) $ parseBack (map (`replaceList` (keywords ++ vars ++ fcs)) codes)</span><br><span class="line">    hClose handle</span><br></pre></td></tr></table></figure>
+<p>Another one:</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- replace Wenyan sytax with Python syntax</span></span><br><span class="line"><span class="title">replace</span> :: (<span class="type">Eq</span> a) =&gt; a -&gt; [(a, a)] -&gt; a</span><br><span class="line"><span class="title">replace</span> x ((a, b):ys)</span><br><span class="line">    | x == a             = b</span><br><span class="line">    | x /= a &amp;&amp; ys /= [] = replace x ys</span><br><span class="line">    | otherwise          = x</span><br><span class="line"></span><br><span class="line"><span class="title">replaceList</span> :: (<span class="type">Eq</span> a) =&gt; [a] -&gt; [(a, a)] -&gt; [a]</span><br><span class="line"><span class="title">replaceList</span> [] _  = []</span><br><span class="line"><span class="title">replaceList</span> xs ys = map (`replace` ys) xs</span><br></pre></td></tr></table></figure>
 
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.e" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
         
-      </div>
-    </div>
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
 
-  
-    </div>
-  
+
+    
+
+  </footer>
+</article>
+
 
 
 

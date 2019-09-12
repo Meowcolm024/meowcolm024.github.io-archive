@@ -87,14 +87,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
               </li>
             
           
@@ -158,6 +158,47 @@
           <h1><a href="/archives/2019" class="archive-year">2019</a></h1>
         </div>
         <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/09/12/Haskell-Syntax-Highlight-test/">
+  Haskell Syntax Highlight test
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/09/12/Haskell-Syntax-Highlight-test/"><span class="article-date">
+  2019-09-12
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>Code from <a href="https://github.com/Meowcolm024/lost-avalon" target="_blank" rel="noopener">lost-avalon</a></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">someFunc</span> :: <span class="type">IO</span> ()</span><br><span class="line"><span class="title">someFunc</span> = <span class="keyword">do</span></span><br><span class="line">    (name:args) &lt;- getArgs</span><br><span class="line">    handle      &lt;- openFile name <span class="type">ReadMode</span>  </span><br><span class="line">    contents    &lt;- hGetContents handle</span><br><span class="line">    <span class="keyword">let</span> codes   = getVal $ parseTo $ contents ++ <span class="string">"\n"</span></span><br><span class="line">    <span class="keyword">let</span> vars    = transVar $ findVar codes</span><br><span class="line">    <span class="keyword">let</span> fcs     = transFC funkey (findFC funkey codes) ++ transFC classkey (findFC classkey codes)</span><br><span class="line">    writeFile (takeWhile (/= '.') name ++ <span class="string">".py"</span>) $ parseBack (map (`replaceList` (keywords ++ vars ++ fcs)) codes)</span><br><span class="line">    hClose handle</span><br></pre></td></tr></table></figure>
+<p>Another one:</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- replace Wenyan sytax with Python syntax</span></span><br><span class="line"><span class="title">replace</span> :: (<span class="type">Eq</span> a) =&gt; a -&gt; [(a, a)] -&gt; a</span><br><span class="line"><span class="title">replace</span> x ((a, b):ys)</span><br><span class="line">    | x == a             = b</span><br><span class="line">    | x /= a &amp;&amp; ys /= [] = replace x ys</span><br><span class="line">    | otherwise          = x</span><br><span class="line"></span><br><span class="line"><span class="title">replaceList</span> :: (<span class="type">Eq</span> a) =&gt; [a] -&gt; [(a, a)] -&gt; [a]</span><br><span class="line"><span class="title">replaceList</span> [] _  = []</span><br><span class="line"><span class="title">replaceList</span> xs ys = map (`replace` ys) xs</span><br></pre></td></tr></table></figure>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
     
   
 
@@ -570,83 +611,6 @@ The alogrithm mainly works like this:</p>
           <p>It is really insteresting that only using one line of <em>Haskell</em> code could create a list of <em>Pythagorean Triples</em>.<br>
 Copy and paste it to GHCi 😃</p>
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[((p^<span class="number">2</span> - q^<span class="number">2</span>),(<span class="number">2</span>*p*q), sqrt((p^<span class="number">2</span> - q^<span class="number">2</span>)^<span class="number">2</span> + (<span class="number">2</span>*p*q)^<span class="number">2</span>)) | p &lt;- [<span class="number">1.</span><span class="number">.5</span>], q &lt;- [<span class="number">1.</span><span class="number">.5</span>], p &gt; q]</span><br></pre></td></tr></table></figure>
-        
-      </div>
-    </div>
-
-  
-
-  
-  
-    
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/12/02/FGO-Script/">
-  FGO Script
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/12/02/FGO-Script/"><span class="article-date">
-  2018-12-02
-</span>
-</a>
-        
-	<span class="article-category tagcloud">
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Fate/">Fate</a></li></ul>
-	</span>
-
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="thinking-in-the-script-of-fatego"><a class="markdownIt-Anchor" href="#thinking-in-the-script-of-fatego"></a> Thinking in the Script of Fate/GO</h1>
-<h2 id="background"><a class="markdownIt-Anchor" href="#background"></a> Background</h2>
-<p>I’m not gonna talk much about the background since everyone who plays this game konws that it’s a really a time-consuming game. What is more, the player need to repetitive actions which are meaningless. Thus, a script is necessary to complete these tasks.</p>
-<h2 id="the-main-thinking"><a class="markdownIt-Anchor" href="#the-main-thinking"></a> The main thinking</h2>
-<p>There are approximately five parts I would like to cover:</p>
-<ol>
-<li>Order Card recognizing</li>
-<li>Servant recognizing</li>
-<li>Attack calculation</li>
-<li>AP recognition &amp; Interface recognition</li>
-<li>Holy Phantasms detection</li>
-</ol>
-<h3 id="order-card-recognizing"><a class="markdownIt-Anchor" href="#order-card-recognizing"></a> Order Card recognizing</h3>
-<p>This is the most basic part of the script(and the <em>Attack calculation</em> part is also essential).</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13678149-f9b3b76bcd46f603.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Battle Interface"></p>
-<p>The parts circled are the parts we need to detect(obviously).</p>
-<p>So first is the type of the card, which are <em>Quick</em>, <em>Arts</em> and <em>Buster</em> (the <em>Extra Attack</em> is speical so we would cover that later in the <em>Servant recognizing</em> part). To achieve this, we could the <strong>OpenCV</strong> library in Python(Yes, we are going to use <strong>Python</strong> this time 😃) and there is a funtion in the library call <strong>matchTemplate()</strong>, which could match a <em>template</em> with a image and produce a matix showing the how much is template is similar to the image in certain location. Knowing that, we could start working.</p>
-<p>First, we should ervery <em>Order Card</em> as an <strong>Object</strong>, since finally we need to choose 3 of them out of 5(ignoring the Holy Phantasms card). There is a way to match necessary information to the card: We could split the interface into five pieces with each piece contain only <strong>ONE</strong> <em>Order Card</em>. Then we could match the <em>card type</em>,  the <em>card state</em> and the <em>servant</em>(<em>Servant recognition</em> is actually much more complicated) into each card separately. With the <strong>matchTemplate()</strong> function metioned above, we could complete it easily, and taht is the <em>Order Card recognizing</em> part done.</p>
-<h3 id="servant-recognizing"><a class="markdownIt-Anchor" href="#servant-recognizing"></a> Servant recognizing</h3>
-<p>Well this is a really tricky part. Because of the fact that all servants would not appear at the <em>first turn</em> in most cases, and it is impossible to make templates for every servant in the game, we need to find a way to solve that.</p>
-<p>And here is the idea that I came up with: We could create the <em>templates</em> from the screenshot(or the interface) itself. As the location of the portrait of the servant on the card is fixed, and each servant has his/hers/its own portrait, we could just cut the portrait of each servant out and create templates using them. However, we might create repeated templates which need to be deleted. With just a few loops(since we do concern about efficiency) can we achieve our target. Then we just need the match the information into the <em>Order Card</em>. So the <em>Servant recognizing</em> part done.(But realizing it using Python is not as easy as I have written here QAQ)</p>
-<h3 id="attack-calculation"><a class="markdownIt-Anchor" href="#attack-calculation"></a> Attack calculation</h3>
-<p>It is known that if we arrange the same set of cards differently, we would get different attack(I would like to call it <em>Attack Index</em> ==). Although different servents have different <em>Attack Index</em>, we just ignore that in order to make the script simple. So we just need to consider the arrangement of the cards we have. The image is the <em>Rule of the aclculation of Attack Index</em></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13678149-b63bcf30df4684f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Rule of calculatiuon"></p>
-<p>Remember that we have already known about the <em>servant</em>, the <em>card type</em>, the <em>card state</em> when we completed the previous steps, we noe can make them into practice. The only thing we need to do is to follow the rule and write an alogrithm based on chart above, just some multiplications right? (so we focusing on whether the script could rather than whether it is effective or not orz)</p>
-<p>Though <em>Holy Phantasms card</em> have not been included yet, we shall talk about taht later. But for the <em>Attack calculation</em> part, it is done.</p>
-<h3 id="ap-recognition-interface-recognition"><a class="markdownIt-Anchor" href="#ap-recognition-interface-recognition"></a> AP recognition &amp; Interface recognition</h3>
-<p>This part is quite important actually. But it is also a easy part due to the fact that we have completed the most difficult parts. Most of this part is just matching templates and getting coordinates. We also need to recover AP when it is insufficient. As for how many <em>Gloden Apples</em> need to be eaten, it depends on the player. It is still a quite an easy part, right?</p>
-<h3 id="holy-phantasms-detection"><a class="markdownIt-Anchor" href="#holy-phantasms-detection"></a> Holy Phantasms detection</h3>
-<p>We know that every servant has a unique <em>Holy Phantasms</em> with its own name. In order to detect that, we need to use the template of the <strong>servant</strong> instead of the template of the <em>order card</em>. But we still need something the facilitate us, since we do not want to release every turn. So we need to mke use of <strong>Tesseract</strong>. This is a OCR library to recognize texts and we will used it to detect <em>turns</em>. Through this, we could release the <em>Holy Phantasms</em> at the certain turn(the <em>FATAL BATTLE</em> for example).</p>
-<h3 id="some-minor-things"><a class="markdownIt-Anchor" href="#some-minor-things"></a> Some minor things</h3>
-<p>If you have read the codes, we may find out that the script also support different “modes”. They are desigened to optimize the performace your <em>party</em>, like <em>Arts Mode</em> etc. Each mode has its own characteristic, for example, in <em>Arts Mode</em>, the script would select 3 <em>Arts cards</em> if possible, instead of choosing the arrangement with highest <em>Attack Index</em>, but in the circumstance that there are less than 3 <em>Arts cards</em> the script would perform like the <em>Default Mode</em> which means that it would chooe the arrangement with highest <em>Attack Index</em>.</p>
-<p>Also the player himself/herself need to make a template for the <em>checkpoint</em> to inform the script of which checkpoint need to be chose. And <em>Support Servants</em> would be chose randomly XD!</p>
-<h2 id="the-end"><a class="markdownIt-Anchor" href="#the-end"></a> The end</h2>
-<p>You can checkout the source code in <a href="https://github.com/Meowcolm024/FGO-One" target="_blank" rel="noopener">GitHub</a> 😃.</p>
-<p>And also two articles written in Chinese: <a href="https://www.jianshu.com/p/55d78d98e168" target="_blank" rel="noopener">1</a>, <a href="https://www.jianshu.com/p/1b2ca5454c73" target="_blank" rel="noopener">2</a>.</p>
-
         
       </div>
     </div>
