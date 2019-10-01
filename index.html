@@ -87,14 +87,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
               </li>
             
           
@@ -147,6 +147,47 @@
         <div style="max-width: 1000px">
       
           
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/10/01/Map-and-Filter-in-C/">
+  Map and Filter in C++
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/10/01/Map-and-Filter-in-C/"><span class="article-date">
+  2019-10-01
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>Using <em>vector</em> makes thing easier 😃</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> a&gt;</span><br><span class="line"><span class="built_in">vector</span>&lt;a&gt; <span class="built_in">map</span>(a (*f) (a), <span class="built_in">vector</span>&lt;a&gt; xs) &#123;</span><br><span class="line">    <span class="keyword">int</span> len = xs.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;a&gt; ys(len);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">        ys[i] = f(xs[i]);</span><br><span class="line">    <span class="keyword">return</span> ys;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> a&gt;</span><br><span class="line"><span class="built_in">vector</span>&lt;a&gt; filter(<span class="keyword">bool</span> (*f) (a), <span class="built_in">vector</span>&lt;a&gt; xs) &#123;</span><br><span class="line">    <span class="keyword">int</span> len = xs.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;a&gt; ys;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> x : xs)</span><br><span class="line">        <span class="keyword">if</span> (f(x)) ys.push_back(x);</span><br><span class="line">    <span class="keyword">return</span> ys;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
   
   
@@ -570,47 +611,6 @@ The alogrithm mainly works like this:</p>
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">bmiTell</span> :: (<span class="type">RealFloat</span> a) =&gt; a -&gt; a -&gt; <span class="type">String</span>  </span><br><span class="line"><span class="title">bmiTell</span> weight height  </span><br><span class="line">    | bmi &lt;= skinny = <span class="string">"You're underweight, you emo, you!"</span>  </span><br><span class="line">    | bmi &lt;= normal = <span class="string">"You're supposedly normal. Pffft, I bet you're ugly!"</span>  </span><br><span class="line">    | bmi &lt;= fat    = <span class="string">"You're fat! Lose some weight, fatty!"</span>  </span><br><span class="line">    | otherwise     = <span class="string">"You're a whale, congratulations!"</span>  </span><br><span class="line">    <span class="keyword">where</span> bmi = weight / height ^ <span class="number">2</span>  </span><br><span class="line">          skinny = <span class="number">18.5</span>  </span><br><span class="line">          normal = <span class="number">25.0</span>  </span><br><span class="line">          fat = <span class="number">30.0</span></span><br></pre></td></tr></table></figure>
 <p><strong>A interesting function</strong></p>
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chain</span> :: (<span class="type">Integral</span> a) =&gt; a -&gt; [a]  </span><br><span class="line"><span class="title">chain</span> <span class="number">1</span> = [<span class="number">1</span>]  </span><br><span class="line"><span class="title">chain</span> n  </span><br><span class="line">    | even n =  n:chain (n `div` <span class="number">2</span>)  </span><br><span class="line">    | odd n  =  n:chain (n*<span class="number">3</span> + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/12/16/Pythagorean-Triples/">
-  Pythagorean Triples
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/12/16/Pythagorean-Triples/"><span class="article-date">
-  2018-12-16
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <p>It is really insteresting that only using one line of <em>Haskell</em> code could create a list of <em>Pythagorean Triples</em>.<br>
-Copy and paste it to GHCi 😃</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[((p^<span class="number">2</span> - q^<span class="number">2</span>),(<span class="number">2</span>*p*q), sqrt((p^<span class="number">2</span> - q^<span class="number">2</span>)^<span class="number">2</span> + (<span class="number">2</span>*p*q)^<span class="number">2</span>)) | p &lt;- [<span class="number">1.</span><span class="number">.5</span>], q &lt;- [<span class="number">1.</span><span class="number">.5</span>], p &gt; q]</span><br></pre></td></tr></table></figure>
         
       </div>
     </div>

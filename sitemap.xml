@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/10/01/Map-and-Filter-in-C/</loc>
+    
+    <lastmod>2019-10-01T14:08:41.471Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/09/12/Haskell-Syntax-Highlight-test/</loc>
     
     <lastmod>2019-09-12T11:32:02.992Z</lastmod>

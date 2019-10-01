@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-12T11:32:02.992Z</updated>
+  <updated>2019-10-01T14:08:41.471Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Map and Filter in C++</title>
+    <link href="http://yoursite.com/2019/10/01/Map-and-Filter-in-C/"/>
+    <id>http://yoursite.com/2019/10/01/Map-and-Filter-in-C/</id>
+    <published>2019-10-01T14:07:37.000Z</published>
+    <updated>2019-10-01T14:08:41.471Z</updated>
+    
+    <content type="html"><![CDATA[<p>Using <em>vector</em> makes thing easier 😃</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> a&gt;</span><br><span class="line"><span class="built_in">vector</span>&lt;a&gt; <span class="built_in">map</span>(a (*f) (a), <span class="built_in">vector</span>&lt;a&gt; xs) &#123;</span><br><span class="line">    <span class="keyword">int</span> len = xs.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;a&gt; ys(len);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">        ys[i] = f(xs[i]);</span><br><span class="line">    <span class="keyword">return</span> ys;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> a&gt;</span><br><span class="line"><span class="built_in">vector</span>&lt;a&gt; filter(<span class="keyword">bool</span> (*f) (a), <span class="built_in">vector</span>&lt;a&gt; xs) &#123;</span><br><span class="line">    <span class="keyword">int</span> len = xs.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;a&gt; ys;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> x : xs)</span><br><span class="line">        <span class="keyword">if</span> (f(x)) ys.push_back(x);</span><br><span class="line">    <span class="keyword">return</span> ys;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Using &lt;em&gt;vector&lt;/em&gt; makes thing easier 😃&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/sp
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Haskell Syntax Highlight test</title>
