@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-01T14:08:41.471Z</updated>
+  <updated>2019-10-23T14:33:44.918Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FGO Automata</title>
+    <link href="http://yoursite.com/2019/10/23/FGO-Automata/"/>
+    <id>http://yoursite.com/2019/10/23/FGO-Automata/</id>
+    <published>2019-10-23T14:31:46.000Z</published>
+    <updated>2019-10-23T14:33:44.918Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/Meowcolm024/FGO-Automata" target="_blank" rel="noopener">FGO-Automata</a> allows you to play FGO just like writting Python Code!</p><p>Sample Script:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> core.Automata <span class="keyword">import</span> Automata</span><br><span class="line"><span class="comment"># init</span></span><br><span class="line">shiki = Automata(<span class="string">"assets/checkpoint.png"</span>, <span class="string">"assets/qp2.png"</span>, (<span class="number">248</span>, <span class="number">0</span>))</span><br><span class="line"><span class="comment"># start</span></span><br><span class="line">shiki.quick_start()</span><br><span class="line"><span class="comment"># battle 1</span></span><br><span class="line">shiki.select_servant_skill(<span class="number">4</span>)</span><br><span class="line">shiki.select_servant_skill(<span class="number">5</span>)</span><br><span class="line">shiki.select_cards([<span class="number">7</span>])</span><br><span class="line"><span class="comment"># battle 2</span></span><br><span class="line">shiki.select_servant_skill(<span class="number">9</span>)</span><br><span class="line">shiki.select_cards([<span class="number">8</span>])</span><br><span class="line"><span class="comment"># battle 3</span></span><br><span class="line">shiki.show_master_skill()</span><br><span class="line">shiki.select_master_skill(<span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">shiki.select_servant_skill(<span class="number">1</span>)</span><br><span class="line">shiki.select_servant_skill(<span class="number">2</span>)</span><br><span class="line">shiki.select_cards([<span class="number">6</span>])</span><br><span class="line"><span class="comment"># finish</span></span><br><span class="line">shiki.finish_battle()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://github.com/Meowcolm024/FGO-Automata&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;FGO-Automata&lt;/a&gt; allows you to play FGO just like wr
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Map and Filter in C++</title>
@@ -135,9 +158,9 @@
       <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
     
     
-      <category term="Haskell" scheme="http://yoursite.com/tags/Haskell/"/>
-    
       <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="Haskell" scheme="http://yoursite.com/tags/Haskell/"/>
     
   </entry>
   
@@ -189,9 +212,9 @@
       <category term="Functional Programming" scheme="http://yoursite.com/categories/Functional-Programming/"/>
     
     
-      <category term="Haskell" scheme="http://yoursite.com/tags/Haskell/"/>
-    
       <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="Haskell" scheme="http://yoursite.com/tags/Haskell/"/>
     
   </entry>
   

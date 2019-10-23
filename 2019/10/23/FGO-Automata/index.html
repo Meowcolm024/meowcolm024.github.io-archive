@@ -8,22 +8,22 @@
 
 <title>
   
-    Euler 26 in Haskell
+    FGO Automata
   
 </title>
 
-<meta name="description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
-<meta name="keywords" content="Haskell">
+<meta name="description" content="FGO-Automata allows you to play FGO just like writting Python Code! Sample Script: 1234567891011121314151617181920from core.Automata import Automata# initshiki = Automata(&quot;assets/checkpoint.png&quot;, &quot;ass">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Euler 26 in Haskell">
-<meta property="og:url" content="http://yoursite.com/2019/02/11/Euler-26-in-Haskell/index.html">
+<meta property="og:title" content="FGO Automata">
+<meta property="og:url" content="http://yoursite.com/2019/10/23/FGO-Automata/index.html">
 <meta property="og:site_name" content="Meowcolm024">
-<meta property="og:description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
+<meta property="og:description" content="FGO-Automata allows you to play FGO just like writting Python Code! Sample Script: 1234567891011121314151617181920from core.Automata import Automata# initshiki = Automata(&quot;assets/checkpoint.png&quot;, &quot;ass">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-21T03:04:09.772Z">
+<meta property="og:updated_time" content="2019-10-23T14:33:44.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Euler 26 in Haskell">
-<meta name="twitter:description" content="Solving Euler 26 using Haskell It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be tran">
+<meta name="twitter:title" content="FGO Automata">
+<meta name="twitter:description" content="FGO-Automata allows you to play FGO just like writting Python Code! Sample Script: 1234567891011121314151617181920from core.Automata import Automata# initshiki = Automata(&quot;assets/checkpoint.png&quot;, &quot;ass">
 
 
   <link rel="alternative" href="/atom.xml" title="Meowcolm024" type="application/atom+xml">
@@ -151,33 +151,32 @@
       
         <div style="max-width: 1000px">
       
-          <article id="post-Euler-26-in-Haskell" class="article article-type-post">
+          <article id="post-FGO-Automata" class="article article-type-post">
   
     <h1 class="article-header">
-      Euler 26 in Haskell
+      FGO Automata
     </h1>
   
   
 
   <div class="article-info">
     <span class="article-date">
-  2019-02-11
+  2019-10-23
 </span>
 
     
 
     
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</span>
 
 
   </div>
   <div class="article-entry">
-    <h2 id="solving-euler-26-using-haskell"><a class="markdownIt-Anchor" href="#solving-euler-26-using-haskell"></a> Solving Euler 26 using Haskell</h2>
-<p>It is really interesting to find ou that the length of the recurring cycle of the reciprocal is only realted to its greatest prime divisor, thus the problem can be transferred to a problem of finding the largest prime number which its reciprocal has the longest recurring cycle under 1,000.</p>
-<p>A question is also asked in <a href="https://stackoverflow.com/questions/54529273/euler-26-in-haskell" target="_blank" rel="noopener">Stack Overflow</a></p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Reciprocal cycles</span></span><br><span class="line"></span><br><span class="line"><span class="title">isPrime</span> :: <span class="type">Integer</span> -&gt; <span class="type">Bool</span></span><br><span class="line"><span class="title">isPrime</span> k</span><br><span class="line">    | k &lt;= <span class="number">1</span>    = error <span class="string">"Seriously?"</span></span><br><span class="line">    | otherwise = null [ x | x &lt;- [<span class="number">2.</span>.floor(sqrt(fromIntegral k))], k `mod` x == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">lp</span> = [x | x &lt;- [<span class="number">7.</span><span class="number">.1000</span>], isPrime x]</span><br><span class="line"></span><br><span class="line"><span class="title">s</span> = map (\n -&gt; head [x | x &lt;- [ceiling(logBase <span class="number">10</span> (fromIntegral n))..], <span class="number">10</span>^x `mod` n == <span class="number">1</span>]) lp</span><br><span class="line"></span><br><span class="line"><span class="title">main</span>::<span class="type">IO</span>()</span><br><span class="line"><span class="title">main</span> = print $ maximum s <span class="comment">-- however it only prints the length, just use `elemIndex` to find the d</span></span><br></pre></td></tr></table></figure>
+    <p><a href="https://github.com/Meowcolm024/FGO-Automata" target="_blank" rel="noopener">FGO-Automata</a> allows you to play FGO just like writting Python Code!</p>
+<p>Sample Script:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> core.Automata <span class="keyword">import</span> Automata</span><br><span class="line"><span class="comment"># init</span></span><br><span class="line">shiki = Automata(<span class="string">"assets/checkpoint.png"</span>, <span class="string">"assets/qp2.png"</span>, (<span class="number">248</span>, <span class="number">0</span>))</span><br><span class="line"><span class="comment"># start</span></span><br><span class="line">shiki.quick_start()</span><br><span class="line"><span class="comment"># battle 1</span></span><br><span class="line">shiki.select_servant_skill(<span class="number">4</span>)</span><br><span class="line">shiki.select_servant_skill(<span class="number">5</span>)</span><br><span class="line">shiki.select_cards([<span class="number">7</span>])</span><br><span class="line"><span class="comment"># battle 2</span></span><br><span class="line">shiki.select_servant_skill(<span class="number">9</span>)</span><br><span class="line">shiki.select_cards([<span class="number">8</span>])</span><br><span class="line"><span class="comment"># battle 3</span></span><br><span class="line">shiki.show_master_skill()</span><br><span class="line">shiki.select_master_skill(<span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">shiki.select_servant_skill(<span class="number">1</span>)</span><br><span class="line">shiki.select_servant_skill(<span class="number">2</span>)</span><br><span class="line">shiki.select_cards([<span class="number">6</span>])</span><br><span class="line"><span class="comment"># finish</span></span><br><span class="line">shiki.finish_battle()</span><br></pre></td></tr></table></figure>
 
   </div>
   <footer class="article-footer">

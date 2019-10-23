@@ -87,14 +87,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">4</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Haskell/">Haskell</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">5</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">7</span></li></ul>
               </li>
             
           
@@ -151,6 +151,63 @@
   
   
     
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2019" class="archive-year">2019</a></h1>
+        </div>
+        <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/01/29/Learning-Haskell/">
+  Learning Haskell
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/01/29/Learning-Haskell/"><span class="article-date">
+  2019-01-29
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Haskell/">Haskell</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>Some simple Haskell functions here 😃</p>
+<p><strong>Quick Sort</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">quicksort</span> :: (<span class="type">Ord</span> a) =&gt; [a] -&gt; [a]</span><br><span class="line"><span class="title">quicksort</span> [] = []</span><br><span class="line"><span class="title">quicksort</span> (x:xs) =</span><br><span class="line">    <span class="keyword">let</span> smallerSorted = quicksort (filter (&lt;=x) xs)  </span><br><span class="line">        biggerSorted = quicksort (filter (&gt;x) xs)</span><br><span class="line">    <span class="keyword">in</span>  smallerSorted ++ [x] ++ biggerSorted</span><br></pre></td></tr></table></figure>
+<p><strong>Fibonacci</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">fbci</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">0</span> = <span class="number">0</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="title">fbci</span> <span class="number">2</span> = <span class="number">1</span></span><br><span class="line"><span class="title">fbci</span> xx = fbci (xx<span class="number">-1</span>) + fbci (xx<span class="number">-2</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>A Traditional way to calculate GCD</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">mygcd</span> :: <span class="type">Int</span> -&gt; <span class="type">Int</span> -&gt; <span class="type">Int</span></span><br><span class="line"><span class="title">mygcd</span> x y </span><br><span class="line">    | (p &gt; <span class="number">0</span>) &amp;&amp; (p /= y) = mygcd p y</span><br><span class="line">    | (p &lt; <span class="number">0</span>) &amp;&amp; (p /= x) = mygcd (-p) x</span><br><span class="line">    | otherwise = p</span><br><span class="line">    <span class="keyword">where</span> p = x - y</span><br></pre></td></tr></table></figure>
+<p><strong>A use of pattern matching</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">bmiTell</span> :: (<span class="type">RealFloat</span> a) =&gt; a -&gt; a -&gt; <span class="type">String</span>  </span><br><span class="line"><span class="title">bmiTell</span> weight height  </span><br><span class="line">    | bmi &lt;= skinny = <span class="string">"You're underweight, you emo, you!"</span>  </span><br><span class="line">    | bmi &lt;= normal = <span class="string">"You're supposedly normal. Pffft, I bet you're ugly!"</span>  </span><br><span class="line">    | bmi &lt;= fat    = <span class="string">"You're fat! Lose some weight, fatty!"</span>  </span><br><span class="line">    | otherwise     = <span class="string">"You're a whale, congratulations!"</span>  </span><br><span class="line">    <span class="keyword">where</span> bmi = weight / height ^ <span class="number">2</span>  </span><br><span class="line">          skinny = <span class="number">18.5</span>  </span><br><span class="line">          normal = <span class="number">25.0</span>  </span><br><span class="line">          fat = <span class="number">30.0</span></span><br></pre></td></tr></table></figure>
+<p><strong>A interesting function</strong></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chain</span> :: (<span class="type">Integral</span> a) =&gt; a -&gt; [a]  </span><br><span class="line"><span class="title">chain</span> <span class="number">1</span> = [<span class="number">1</span>]  </span><br><span class="line"><span class="title">chain</span> n  </span><br><span class="line">    | even n =  n:chain (n `div` <span class="number">2</span>)  </span><br><span class="line">    | odd n  =  n:chain (n*<span class="number">3</span> + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+        
+      </div>
+    </div>
+
+  
+
+  
+  
+    
+      
+        </div></section>
       
       
       <section class="archives-wrap">
