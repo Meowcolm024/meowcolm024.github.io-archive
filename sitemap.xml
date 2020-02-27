@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/27/Currying-in-C/</loc>
+    
+    <lastmod>2020-02-27T09:07:16.500Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/10/23/FGO-Automata/</loc>
     
     <lastmod>2019-10-23T14:33:44.918Z</lastmod>
